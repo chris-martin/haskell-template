@@ -35,7 +35,6 @@ tests:
     ghc-options:
       - -threaded
     dependencies:
-      - foo
       - doctest
 
   hedgehog:
