@@ -1,7 +1,13 @@
 language: nix
 
 env:
-  - LC_ALL=en_US.UTF-8
+  global:
+    - LC_ALL=en_US.UTF-8
+  matrix:
+    - STACK_YAML=stack-lts-2.yaml
+    - STACK_YAML=stack-lts-6.yaml
+    - STACK_YAML=stack-lts-10.yaml
+    - STACK_YAML=stack-nightly.yaml
 
 cache:
   directories:
@@ -10,9 +16,10 @@ cache:
 
 before_install:
   - nix-env -i stack
+  - stack upgrade
 
 script:
-  - stack --nix --no-terminal test
+  - stack test --nix --no-nix-pure --no-terminal --stack-yaml $STACK_YAML
 
 notifications:
   email: false
