@@ -8,6 +8,9 @@ packages:
 
 extra-deps:
   - hedgehog-0.5
+  - transformers-0.5.2.0
+  - transformers-compat-0.5.1.4
+  - wl-pprint-annotated-0.1.0.0
 
 flags:
   foo:
