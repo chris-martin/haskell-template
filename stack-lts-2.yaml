@@ -5,3 +5,10 @@ resolver: lts-2.22
 
 packages:
   - foo
+
+flags:
+  partial-semigroup:
+    enable-hedgehog: false
+    enable-doctest: false
+    semigroup-in-base: false
+    identity-in-base: false

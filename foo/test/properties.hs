@@ -1,4 +1,7 @@
+{-# LANGUAGE CPP             #-}
 {-# LANGUAGE TemplateHaskell #-}
+
+#ifdef HEDGEHOG
 
 -- Hedgehog
 import           Hedgehog       (Property, property, (===))
@@ -19,3 +22,10 @@ main = do
     IO.hSetBuffering h IO.LineBuffering
   success <- Hedgehog.checkParallel $$(Hedgehog.discover)
   unless success Exit.exitFailure
+
+#else
+
+main :: IO ()
+main = putStrLn "Tests using hedgehog are disabled."
+
+#endif
