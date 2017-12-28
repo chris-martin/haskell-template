@@ -18,7 +18,7 @@ before_install:
   - nix-channel --add https://nixos.org/channels/nixos-17.09 nixpkgs
   - nix-channel --update
   - nix-env -i stack
-  - stack upgrade
+  - stack upgrade --nix
 
 script:
   - stack test --nix --no-nix-pure --no-terminal --stack-yaml $STACK_YAML
