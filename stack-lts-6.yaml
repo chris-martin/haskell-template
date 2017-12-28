@@ -10,7 +10,7 @@ extra-deps:
   - hedgehog-0.5
 
 flags:
-  partial-semigroup:
+  foo:
     enable-doctest: false
     semigroup-in-base: false
 
