@@ -15,6 +15,8 @@ cache:
     - /nix/store
 
 before_install:
+  - nix-channel --add https://nixos.org/channels/nixos-17.09 nixpkgs
+  - nix-channel --update
   - nix-env -i stack
   - stack upgrade
 
