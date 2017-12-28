@@ -63,10 +63,10 @@ library
   else
     build-depends: semigroups >=0.8.4 && <1
 
-test-suite doctest
+test-suite docs
   default-language: Haskell2010
   type: exitcode-stdio-1.0
-  main-is: doctest.hs
+  main-is: docs.hs
   hs-source-dirs: test
   ghc-options: -Wall -threaded
   build-depends: base >=4 && <4.11
@@ -75,10 +75,10 @@ test-suite doctest
     build-depends: doctest >=0.11 && <0.14
     cpp-options: -DDOCTEST
 
-test-suite hedgehog
+test-suite properties
   default-language: Haskell2010
   type: exitcode-stdio-1.0
-  main-is: hedgehog.hs
+  main-is: properties.hs
   hs-source-dirs: test
   ghc-options: -Wall -threaded
   build-depends: foo, base >=4 && <4.11
