@@ -6,6 +6,7 @@ env:
   matrix:
     - STACK_YAML=stack-lts-2.yaml
     - STACK_YAML=stack-lts-6.yaml
+    - STACK_YAML=stack-lts-9.yaml
     - STACK_YAML=stack-lts-10.yaml
     - STACK_YAML=stack-nightly.yaml
 
